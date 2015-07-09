@@ -1,0 +1,14 @@
+- Example of numerical computation with the SMP kernel
+CDiag.h
+diag-c.h
+definizioni.h
+test_heigen.c
+
+- Events and workerpool simple tests 
+test_cs_events.c
+test_cs_workerpool.c
+test_cs_engine.c
+
+Tests are compiled and installed by launching: 
+
+$ make && make install 
