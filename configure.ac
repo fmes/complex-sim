@@ -3,6 +3,7 @@
 
 #AC_PREREQ([2.69])
 AC_INIT([ComplexSim], [0.1], [fabrizio.messina@gmail.com])
+AM_PROG_AR
 LT_INIT([shared])
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
@@ -12,6 +13,8 @@ AC_CONFIG_HEADERS([config.h])
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_MAKE_SET
+
+
 
 # FIXME: Replace `main' with a function in `-lgsl':
 AC_CHECK_LIB([m],[cos])
