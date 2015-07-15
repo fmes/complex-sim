@@ -1,3 +1,4 @@
+AUTOMAKE_OPTIONS=subdir-objects
 lib_LTLIBRARIES=libavl.la libcomplexsim.la 
 
 libavl_la_SOURCES=avl-2.0/src/avl.c avl-2.0/src/pavl.c avl-2.0/src/rb.c avl-2.0/src/rtrb.c avl-2.0/src/tbst.c avl-2.0/src/bst.c avl-2.0/src/pbst.c avl-2.0/src/rtavl.c avl-2.0/src/slr.c avl-2.0/src/trb.c avl-2.0/src/bsts.c avl-2.0/src/prb.c avl-2.0/src/rtbst.c avl-2.0/src/tavl.c
@@ -30,4 +31,4 @@ sample_engine_event_driven_LDFLAGS=-L.libs -lcomplexsim -lavl
 sample_engine_activity_driven_LDFLAGS=-L.libs -lcomplexsim -lavl
 #test_wp_burst_LDFLAGS=-L.libs -lcomplexsim -lavl
 #test_cs_events_CFLAGS=-l
-CFLAGS+=-g -Iinclude -Iavl-2.0/include
+AM_CFLAGS=-g -Iinclude -Iavl-2.0/include #FIXME
