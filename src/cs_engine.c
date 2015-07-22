@@ -357,10 +357,10 @@ void cs_sim_start(cs_engine_t *engine){
     exit(-1);
   }
 
-  int c1, c2, c3;
-  c1 = engine->alist!=NULL && engine->alist->nact>0;
-  c2 = (engine->net_rt != NULL);
-  c2 = (engine->evm!=NULL);
+  int c1=0, c2=0, c3=0;
+  c1 = (engine->alist!=NULL && engine->alist->nact>0) == 0 ? 0 : 1;
+  c2 = (engine->net_rt != NULL) == 0 ? 0 : 1;
+  c3 = (engine->evm!=NULL) == 0 ? 0 : 1;
 
   /*
   * There must be almost a user-defined activity, and/or an event manager.
