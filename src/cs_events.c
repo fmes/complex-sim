@@ -270,6 +270,7 @@ void _evm_set_not_running(cs_event_manager_t *evm){
 
 void _evm_set_running(cs_event_manager_t *evm){
   log4c_category_log(log4c_category_get("cs.events"), LOG4C_PRIORITY_TRACE, "Event manager set to running..");
+  pthread_mutex_lock(evm->mutex);
   evm->running = 1;
   pthread_mutex_unlock(evm->mutex);
 }
