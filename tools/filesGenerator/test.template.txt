@@ -1,0 +1,3 @@
+line1 bb $b
+line2 $a
+line3 $c 

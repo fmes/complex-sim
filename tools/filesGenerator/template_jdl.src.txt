@@ -1,0 +1,14 @@
+[
+ Type = "$TypeJdl";
+ JobType = "$JobType";
+ Executable = "$Interprete";
+ Environment = {};
+ Arguments = "$SCRIPT $Script_opt";
+ StdOutput = "$SCRIPT.out";
+ StdError = "$SCRIPT.err";
+ InputSandbox = {"$SCRIPT, $tar"};
+ OutputSandbox = {"$SCRIPT.out", "$SCRIPT.err"};
+ Requirements = (
+ 	  other.GlueCEUniqueID == "$CE_UNIQUE_ID"
+ );
+]

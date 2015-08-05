@@ -1,0 +1,7 @@
+a=$b aa $c $tar_input 
+b=b1;$d
+c=c1,$b;c2
+d=d1
+%FILE_IN%=test/f1,test/f2,test/f3
+%TAR%:$tar_input=test/f1,test/f2;test/f3;test/f4
+%ZIP%:$zip=test/f1,test/f2;test/f3;test/f4
