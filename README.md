@@ -19,12 +19,11 @@ For a detailed description of the architecture and design of the simulator and/o
 
 ##Building and installing
 
-Supposing that the library igraph has been installed into /opt/igraph, that Log4c has been installed in a standard location (e.g. /usr/lib) and that Complex-sim will be installed into /opt/complexsim: 
+Supposing that the library igraph has been installed into /opt/igraph, that Log4c has been installed in a standard location (e.g. /usr/lib) and that Complex-sim will be installed into /opt/complexsim:
 
 ```
-~$ automake -ac 
 ~$ autoreconf -fi
-~$ CFLAGS=-I/opt/igraph/include LDFLAGS=-L/opt/igraph/lib ./configure --prefix=/opt/complexsim
+~$ CFLAGS=`pkgconf --cflags igraph` LDFLAGS=`pkgconf --libs igraph` ./configure --prefix=/opt/complexsim
 ~$ make && make install
 ```
 The procedure described above allows the user to build the library in many systems. 
